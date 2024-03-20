@@ -21,4 +21,11 @@ router.get('/getFoods', function(req, res) {
   res.status(200).json(serverFoods);
 });
 
+/* POST new food */
+router.post('/addFood', function(req, res) {
+  const newFood = req.body;
+  serverFoods.push(newFood);
+  res.status(200).json(newFood);
+});
+
 module.exports = router;

@@ -14,14 +14,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
     createList();
 
     document.getElementById("addButton").addEventListener("click", function() {
-        Foods.push(new FoodObject(document.getElementById("foodName").value, 
-        document.getElementById("cookTime").value, selectedTemp, document.getElementById("foodDesc").value));
+        let newFood = new FoodObject(document.getElementById("foodName").value, 
+        document.getElementById("cookTime").value, selectedTemp, document.getElementById("foodDesc").value);
 
         document.getElementById("foodName").value = "";
         document.getElementById("cookTime").value = "";
         document.getElementById("foodDesc").value = "";
 
-        createList();
+        $.ajax({
+            url: "/addFood",
+            type: "POST",
+            data: JSON.stringify(newFood),
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                console.log(result);
+                document.location.href = "index.html#show";
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert("Server could not add Food: " + newFood.name);
+                alert(textStatus + " " + errorThrown);
+            }
+        });
     });
 
     $(document).bind("change", "#select-temp", function (event, ui) {
