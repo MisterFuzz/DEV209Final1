@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
     <script src="javascripts/main.js"></script>
-
+    <link rel="stylesheet" href="stylesheets/style.css">
     <title>Airfryer Snack Foods</title>
 </head>
 <body>
     <div data-role="page" id="home">
 
-        <div data-role="header" data-theme="e">
-            <div data-role="navbar" data-theme="e">
+        <div data-role="header" data-theme="a">
+            <div data-role="navbar" data-theme="a">
                 <ul>
                 <li><a href="#show" data-transition="flip">Your Foods</a></li>
                 <li><a href="#add" data-transition="flip">Add New Food</a></li>
@@ -32,8 +31,8 @@
     </div>
 
     <div data-role="page" id="show">
-        <div data-role="header" data-theme="e">
-            <div data-role="navbar" data-theme="e">
+        <div data-role="header" data-theme="a">
+            <div data-role="navbar" data-theme="a">
                 <ul>
                 <li><a href="#home" data-transition="flip">Home</a></li>
                 <li><a href="#add" data-transition="flip">Add New Food</a></li>
@@ -48,8 +47,8 @@
     </div>
 
     <div data-role="page" id="add">
-        <div data-role="header" data-theme="e">
-            <div data-role="navbar" data-theme="e">
+        <div data-role="header" data-theme="a">
+            <div data-role="navbar" data-theme="a">
                 <ul>
                 <li><a href="#home" data-transition="flip">Home</a></li>
                 <li><a href="#show" data-transition="flip">Show Foods</a></li>
@@ -58,7 +57,7 @@
             <h2>Add New Food</h2>
         </div>
 
-        <div data-role="content" data-theme="d">
+        <div data-role="content" data-theme="a">
             Enter Food Name <br>
             <input type="text" value="" id="foodName">
             Enter Cook Time
@@ -78,8 +77,8 @@
     </div>
 
     <div data-role="page" id="info">
-        <div data-role="header" data-theme="e">
-            <div data-role="navbar" data-theme="e">
+        <div data-role="header" data-theme="a">
+            <div data-role="navbar" data-theme="a">
                 <ul>
                 <li><a href="#home" data-transition="flip">Home</a></li>
                 <li><a href="#show" data-transition="flip">Show Foods</a></li>
@@ -89,7 +88,7 @@
             <h2>Food Info</h2>
         </div>
 
-        <div data-role="content" data-theme="c">
+        <div data-role="content" data-theme="a">
             <p id="Name"></p>
             <p id="Time"></p>
             <p id="Temp"></p>
